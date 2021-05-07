@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/9448297042.js" crossorigin="anonymous"></script>
+	<!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+	<title>LAON</title>
+	<style>
+
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap');
+
+		html{
+			scroll-behavior: smooth;
+		}
+		body{
+			width: 100%;
+			margin : 0 auto;
+			font-family: 나눔고딕;
+			overflow-x: hidden;
+		}
+		header{
+			width: 100%;
+			height: 95px;
+			background: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 9999;
+			text-align: center;
+			font-weight: bold;
+			border-bottom: 2px solid gray;
+		}
+		a{
+			color: black;
+			text-decoration: none;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		/*-------------헤더메뉴바--------------------*/
+		nav{
+			position: absolute;
+			bottom: 0%;
+			width: 100%;
+			margin-bottom: 7px;
+		}
+		#logo{
+			float: left;
+			margin: 15px;
+		}
+		#logo img{
+			width: 130px;
+			height: auto;
+		}
+		input[type=text]{
+			width: 300px;
+			height: 30px;
+			margin-top: 20px;
+			background: url(search-white.png) no-repeat 16px white;
+			border: 3px solid #a6c6f8;
+			outline: none;
+			text-align: left;
+			line-height: 50px;
+			font-size: 16px;
+			transition: 0.6s;
+			color: black;
+			padding-left: 50px;
+			transition: 0.6s;
+			border-radius: 20px;
+			margin-left: -150px;
+		}
+		input[type=text]:focus{
+			border: 1px solid black;
+			background: white;
+			width: 500px;
+			border-radius: 0;
+		}
+		#mypage{
+			position: absolute;
+			top: 6px;
+			right: 20px;
+			font-size: 35px;
+		}
+		#mainmenu li a{
+			float: left;
+			width: 16%;
+			transition: 0.2s;
+		}
+		#mainmenu li a:hover{
+			color: #A8DCE4;
+		}
+		/*---------------------------------*/
+		section{
+			width: 100%;
+			/*height:800px;*/
+		}
+		/*-------------box1--------------------*/
+		#box1{
+			background:url(bf.jpg) no-repeat;
+			min-width: 100%;
+			height: 800px;
+			/*position: relative;*/
+		}
+
+
+		
+
+		#daysearch{
+			width: 400px;
+			height: 500px;
+			background: white;
+			border-radius: 21.9999px;
+			color: black;
+			position: relative;
+			top: 180px;
+			left: 100px;
+			z-index: 9;
+			box-shadow: 5px 5px 15px black;
+		}
+		.head_ul li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		input[type="radio"] {
+			left: -999%;
+			position: absolute;
+		}
+		.content {
+			display: none;
+			/*position: absolute;*/
+			/*overflow: hidden;*/
+		}
+		[id^="travel"]:checked ~ [id^="travel"] {
+			display: block;
+		}
+		.head_ul label {
+			display: inline-block;
+			cursor: pointer;
+			float: left;
+			font-size: 1em;
+			background: #a6c6f8;
+			width: 133.1999px;
+			height: 35px;
+			text-align: center;
+			line-height: 35px;
+		}
+		#label1 {
+			border-radius: 20px 0 0 0;
+		}
+		#label3 {
+			border-radius: 0 20px 0 0;
+		}
+		[id^="travel"]:checked ~ label {
+			font-weight: bold;
+			background: white;
+		}
+		.content {
+			position: absolute;
+			left: 80px;
+			top: 80px;
+		}
+		.head_select {
+			width: 200px;
+			padding: .8em .5em;
+			/*border: 1px solid #999;*/
+	/*		border-radius: 20px;*/
+			font-family: inherit;
+			background: url('arrow.jpg') no-repeat 95% 50% white;
+			border-radius: 5px;
+			appearance: none;
+/*			margin-bottom: 30px;
+			margin-top: 7px;*/
+			margin: 20px;
+		}
+/*		input[type="datetime-local"] {
+			{
+			width: 200px;
+			padding: 0.8em 0.5em;
+			border: 1px solid #999;
+			border-radius: 20px;
+			font-family: inherit;
+			border-radius: 0px;
+			appearance: none;
+		}
+/*		.check_in {
+			width: 500px;
+			background: black;
+			height: 100px;
+		}*/
+		#daysearch_btn{
+			background: white;
+			border:1px  solid gray;
+			position: relative;
+			top: 400px;
+			left: 150px;
+			border-radius: 10px;
+			font-size: 15px;
+			padding: 10px;
+		}
+
+		/*-------------box2--------------------*/
+		#box2{
+			background: white;
+			height: 800px;
+			text-align: center;
+		}
+		#polar {
+			height: 600px;
+			width: 1200px;
+			margin: 0 auto;
+			margin-top: 130px;
+		}
+		.box_polar {
+			display: inline-block;
+			width: 200px;
+			height: 250px;
+			top: 50%;
+			left: 50%;
+			margin: 10px;
+			/*border-right: : 1px solid gray;*/
+			box-shadow: 1px 1px 3px #ccc;
+			text-align:center;
+			font-weight: 800;
+			line-height: 80px;
+		}
+		.img_polar{
+			display: block;
+			padding: 4px;
+			margin :auto;
+			margin-top: 3px;
+			width:180px;
+			height:150px;
+			float: center;
+		}
+		/*-------------box3--------------------*/
+		#box3{
+			background:url(sea2.jpg) no-repeat;
+			background-size: cover;
+			height:800px;
+			padding: 100px;
+			width: 100%;
+			text-align: center;
+		}
+		#box3 h1{
+			font-size: 70px;
+			margin: -20px 0px -20px -200px;
+		}
+		#month_tab{
+			position: relative;
+			float: none;
+			margin: 0;
+			width: 1200px;
+			text-align: center;
+			margin: 0 auto;
+			margin-top: 120px;
+		}
+		#month_tab li{
+			float: left;
+		}
+		#month_tab input[type="radio"]{
+			position: absolute;
+			left:-9999px;
+		}
+		#month_tab label{
+			display: block;
+			position: relative;
+			top: 20px;
+			padding: 10px 20px;
+			font-size: 25px;
+			background: white;
+			cursor: pointer;
+			transition: 0.2s;
+			font-weight: bold;
+		}
+		#month_tab label:hover{
+			background: #abc6f8;
+		}
+		#month_tab .content{
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 59px;
+			padding: 30px 25px 60px;
+			width: 1200px;
+			/*background: skyblue;*/
+			/*border-radius: 0 14px 0 0;*/
+		}
+		#month_tab [id^="tab"]:checked ~ [id^="tab-content"]{
+			display: block;
+		}
+		#month_tab [id^="tab"]:checked + label{
+			background: #abc6f8;
+			box-shadow: 2px 2px 5px #ccc;
+		}
+		table{
+			border-collapse: collapse;
+			width: 1000px;
+			height: 500px;
+			text-align: center;
+			margin-left: -30px;
+			margin-right: auto;
+			background: rgba(224,250,255,0.7);
+			table-layout: fixed;
+			border: 1px solid white;
+			font-size: 13px;
+			font-weight: bold;
+		}
+		td{
+			border: 1px solid white;
+		}
+		#week{
+			height: 50px;
+			font-weight: bold;
+			border-top: 3px solid #abc6f8;
+			border-bottom: 3px solid #abc6f8;
+		}
+		table tr td:nth-child(1){
+			color: red;
+		}
+		table tr td:nth-child(7){
+			color: blue;
+		}
+		td{
+			position: relative;
+		}
+/*		.infobox{
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			width: 500px;
+			height: 800px;
+			display: none;
+		}*/
+		table tr .fes{
+			background:#dbfbff;
+			opacity: 80%;
+		}
+		table tr .fes:hover{
+			background: #A8DCE4;
+			cursor: pointer;
+		}
+/*		table tr .fes:hover  .infobox{
+			display: block;
+		}*/
+/*		.travel_pic{
+			width: 500px;
+			height: auto;
+			box-shadow: 5px 5px 15px black;
+		}*/
+		/*-------------box4--------------------*/
+		#box4{
+			background: white;
+			height:950px;
+			text-align: center;
+		}
+		#container01{
+			margin-top: 130px;
+		}
+		#box4 h1{
+			margin-top: 200px;
+		}
+		.list {
+	      margin: 0;
+	      padding: 0;
+	      list-style: none;
+	    }
+	    .list li {
+	      position: relative;
+	      float: left;
+	      padding: 0;
+	      margin: 0;
+	      overflow: hidden;
+	      width: 20%;
+	      height: 500px;
+	    }
+	    .list .caption {
+	       position: absolute;
+	       top:0px;
+	       width: 100%;
+	       height: 580px;
+	       background: rgba(0,0,0,0.6);
+	       opacity: 0;
+	       transition: 0.3s;
+	       margin-top: -80px;
+	       }
+
+	    .list li:hover .caption {
+	       opacity: 1;
+	       }
+	    .caption {
+	      color: #ccc;
+	      text-align: center;
+	    }
+
+	    .caption p{
+          color: #fff;
+	    }
+	    /*-------------box5--------------------*/
+	    #box5{
+			background: url(plane-841441_1920.jpg) no-repeat;
+			background-size: cover;
+			height: 1000px;
+			text-align: center;
+		}
+		#box5 h1{
+			padding-top: 100px;
+			padding-bottom: 70px;
+		}
+		#season_picture {
+			position: relative;
+			left: -20%;
+			width: 448px;
+            height: 550px;
+            background-image: url(사계절-글씨.jpg);
+            background-size: cover;
+            margin: 0 auto;
+            border: 9px solid white;
+		}
+        
+        #season_button {
+           position: absolute;
+           top: 250px;
+           left: 10px;
+           float: left;
+           width: 50px;
+        }
+        
+        #season_ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+	        height: 100px;
+	        margin-top: -50px;
+	    }
+
+        #season_ul li {
+            width: 40px;
+            margin: 0;
+            height: 50px;
+        }
+
+	    #season_button #season_ul{
+			position: relative;
+			float: none;
+			width: 500px;
+			text-align: left;
+	    }
+
+        #season_button #season_ul input[type="radio"]{
+            position: relative;
+            left: -9999px;
+        }
+/*라디오 글자 부분*/
+        #season_button #season_ul label  {
+        	display: inline-block;
+        	width: 90px;
+        	height: 30px;
+        	margin: 4px;
+        	border-radius: 15px;
+        	background: white;
+        	text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+         #season_button #season_ul label:hover {
+            background: #ccc;
+         }
+/*여기가 사진 감싸는 랩퍼 부분*/
+        .season_content {
+            overflow: hidden;
+            display: none;
+            position: absolute;
+            left: 300px;
+            top: -60px;
+            float: left;
+            width: 1000px;
+            height: 300px;
+            margin-top: 50px;
+        }
+/*라벨이랑 라디오 묶는 부분*/
+        [id^="season"]:checked ~ [id^="pab-content"] {
+            display: block;
+        }
+        .travel1box img{
+        	width: 300px;
+        	height: 250px;
+        	border: 5px solid white;
+        }
+        .travel1box img:hover{
+        	cursor: pointer;
+        	width: 310px;
+        	height: 260px;
+        	box-shadow: 2px 2px 5px black;
+        }
+        /*-------------box6--------------------*/
+        #box6{
+			background: white;
+			height: 700px;
+			text-align: center;
+		}
+		#hotel {
+			width:  900px;
+			margin: 0 auto;
+			margin-top: 150px;
+		}
+		#hotel h1{
+			margin-bottom: 30px;
+		}
+	
+		.hh {
+			float: center;
+			display: inline-block;
+			position: relative;
+			width: 150px;
+			height: 150px;
+			margin: 10px;
+			border-radius:50%;
+            text-align: center;
+            margin-top: 70px;
+		}
+		.hh img{
+			display: block;
+			margin :auto;
+			width:150px;
+			height:150px;
+			border-radius:50%; 
+			float: center;
+			margin-bottom: 15px;
+		}
+
+		.hh .detail {
+			position: absolute;
+			top: 100%;
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			background:rgba(45,45,45,0.6);
+			opacity: 0;
+			transition: 0.7s;
+		}
+
+		.hh:hover .detail {
+			opacity: 1;
+			transform: translateY(-150px);
+
+		}
+	    
+	    .detail p{
+			margin-top: 40px;
+			color: white;
+		}
+		/*-------------푸터--------------------*/
+
+		footer{
+			width: 100%;
+			height: 500px;
+			background: #eaeaea;
+			padding-top: 110px;
+			
+		}
+		#foot{
+			border-top: 2px solid black;
+			width: 1400px;
+			height: 400px;
+			background: white;
+			margin: 0 auto;
+		}
+		.foot_cont{
+			float: left;
+			width: 310px;
+			height: 400px;
+			padding-top: 40px;
+			padding-left: 30px;
+			padding-right: 5px;
+			line-height: 20px;
+		}
+		#foot_third img{
+			width: 330px;
+			height: 360px;
+		}
+		#foot_first{
+			margin-top: 60px;
+		}
+		span{
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="#" id="logo"><img src="ll.png" alt=""></a>
+		<form action=""><input type="text" size="40" id="search"></form>
+		<a href="" id="mypage"><i class="fas fa-user"></i></a>
+		<nav>
+			<ul id="mainmenu">
+				<li><a href="#">전체메뉴</li>
+				<li><a href="#box2">라온홈</a></li>
+				<li><a href="#box3">달력</a></li>
+				<li><a href="#box4">항공/숙박</a></li>
+				<li><a href="#box5">국내여행</a></li>
+				<li><a href="#box6">해외여행</a></li>
+		    </ul>
+		</nav>
+	</header>
+	<section id="box1">
+		<div id="daysearch">
+			<ul class="head_ul">
+				<li>
+					<input type="radio" name="login" id="travel_out" class="login_" checked="">
+					<label for="travel_out" id="label1">국제여행</label>
+					<div id="travel_out_content" class="content">
+						<div>
+							<select class="head_select">
+								<option>출발도시</option>
+								<option>김포</option>
+								<option>제주</option>
+								<option>인천</option>
+								<option>부산</option>
+								<option>청주</option>
+								<option>광주</option>
+								<option>대구</option>
+								<option>부산</option>
+							</select>
+						<div>
+							<select class="head_select">
+								<option>도착도시</option>
+								<option>김포</option>
+								<option>제주</option>
+								<option>인천</option>
+								<option>부산</option>
+								<option>청주</option>
+								<option>광주</option>
+								<option>대구</option>
+								<option>부산</option>
+							</select>
+						</div>
+						출발 시간을 정해주세요<input type="datetime-local" name="">
+					</div>
+				</li>
+				<li>
+					<input type="radio" name="login" id="travel_in" class="login_">
+					<label for="travel_in" id="label2">국내여행</label>
+					<div id="traveler_in_content" class="content">
+						<div>
+							<select class="head_select">
+								<option>출발도시</option>
+								<option>김포</option>
+								<option>제주</option>
+								<option>인천</option>
+								<option>부산</option>
+								<option>청주</option>
+								<option>광주</option>
+								<option>대구</option>
+								<option>부산</option>
+							</select>
+						<div>
+							<select class="head_select">
+								<option>도착도시</option>
+								<option>김포</option>
+								<option>제주</option>
+								<option>인천</option>
+								<option>부산</option>
+								<option>청주</option>
+								<option>광주</option>
+								<option>대구</option>
+								<option>부산</option>
+							</select>
+						</div>
+						출발 시간을 정해주세요<input type="datetime-local" name="">
+					</div>
+				</li>
+				<li>
+					<input type="radio" name="login" id="travel_hotel" class="login_">
+					<label for="travel_hotel" id="label3">호텔</label>
+					<div id="travel_hotel_content" class="content">
+						<select class="head_select">
+							<option>나라이름</option>
+						</select>
+						<input type="datetime-local" name="" class="check_in"> ~
+						<input type="datetime-local" name="" class="check_in">
+						<select class="head_select">인원
+							<option>성인</option>
+							<option>1명</option>
+							<option>1명</option>
+						</select>
+						<select class="head_select">
+							<option>유아</option>
+							<option>1명</option>
+							<option>1명</option>
+						</select>
+					</div>
+				</li>
+			</ul>
+			<a href="#" id="daysearch_btn">SEARCH</a>
+		</div>
+	<!-- Start WOWSlider.com BODY section -->
+		<!-- <div id="wowslider-container1">
+		<div class="ws_images"><ul>
+		<li><img src="data1/images/airport2373727_1920.jpg" alt="airport-2373727_1920" title="airport-2373727_1920" id="wows1_0"/></li>
+		<li><img src="data1/images/boats2758962_1920.jpg" alt="boats-2758962_1920" title="boats-2758962_1920" id="wows1_1"/></li>
+		<li><a href="http://wowslider.net"><img src="data1/images/canal1209808_1920.jpg" alt="slider html" title="canal-1209808_1920" id="wows1_2"/></a></li>
+		<li><img src="data1/images/polynesia3021072_1920.jpg" alt="polynesia-3021072_1920" title="polynesia-3021072_1920" id="wows1_3"/></li>
+		</ul></div>
+		<div class="ws_bullets"><div>
+		<a href="#" title="airport-2373727_1920"><span><img src="data1/tooltips/airport2373727_1920.jpg" alt="airport-2373727_1920"/>1</span></a>
+		<a href="#" title="boats-2758962_1920"><span><img src="data1/tooltips/boats2758962_1920.jpg" alt="boats-2758962_1920"/>2</span></a>
+		<a href="#" title="canal-1209808_1920"><span><img src="data1/tooltips/canal1209808_1920.jpg" alt="canal-1209808_1920"/>3</span></a>
+		<a href="#" title="polynesia-3021072_1920"><span><img src="data1/tooltips/polynesia3021072_1920.jpg" alt="polynesia-3021072_1920"/>4</span></a>
+		</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">css image slider</a> by WOWSlider.com v9.0</div>
+		<div class="ws_shadow"></div>
+		</div>	
+		<script type="text/javascript" src="engine1/wowslider.js"></script>
+		<script type="text/javascript" src="engine1/script.js"></script> -->
+	<!-- End WOWSlider.com BODY section -->
+	</section>
+	<section id="box2">
+			<div id="polar">
+				<h1>#여행가고싶을때_라온투어로</h1>
+				<div class="box_polar">
+					<a href=""><img src="뉴욕폴라.jpg" alt="" class="img_polar"></a>#뉴욕에서</div>
+				<div class="box_polar">
+					<a href=""><img src="가오슝폴라.jpg" alt="" class="img_polar"></a>#가오슝에서</div>
+				<div class="box_polar">
+					<a href=""><img src="파리폴라.jpg" alt="" class="img_polar"></a>#파리에서</div>
+				<div class="box_polar">
+					<a href=""><img src="스위스폴라.jpg" alt="" class="img_polar"></a>#스위스에서</div>
+				<div class="box_polar">
+					<a href=""><img src="홍콩폴라.jpg" alt="" class="img_polar"></a>#홍콩에서</div>
+				<div class="box_polar">
+					<a href=""><img src="스페인폴라.jpg" alt="" class="img_polar"></a>#스페인에서</div>
+				<div class="box_polar">
+					<a href=""><img src="시드니폴라.jpg" alt="" class="img_polar"></a>#시드니에서</div>
+				<div class="box_polar">
+				    <a href=""><img src="라오스폴라.jpg" alt="" class="img_polar"></a>#라오스에서</div>
+				<div class="box_polar">
+					<a href=""><img src="그리스폴라.jpg" alt="" class="img_polar"></a>#그리스에서</div>
+				<div class="box_polar">
+					<a href=""><img src="필리핀폴라.jpg" alt="" class="img_polar"></a>#필리핀에서</div>			
+			</div>
+	</section>
+	<section id="box3">
+		<h1>#2월달도_라온이라오</h1>
+		<ul id="month_tab">
+			<li>
+				<input type="radio" name="tabs" id="tab1">
+				<label for="tab1">1월</label>
+				<div id="tab-content1" class="content">
+					<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td>1월</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab2" checked>
+				<label for="tab2">2월</label>
+				<div id="tab-content1" class="content">
+					<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>4</td>
+							<td>5</td>
+							<td>6</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>8</td>
+							<td class="fes">9
+<!-- 								<div class="infobox">
+									<h3>캐나다</h3>
+									<img src="canal-1209808_1920.jpg" alt="" class="travel_pic"><br>
+									캐나다캐나다<br>
+									캐나다캐나다<br>
+									캐나다캐나다
+								</div> -->
+							</td>
+							<td>10</td>
+							<td>11</td>
+							<td>12</td>
+							<td>13</td>
+						</tr>
+						<tr>
+							<td>14</td>
+							<td>15</td>
+							<td>16</td>
+							<td class="fes">17
+<!-- 								<div class="infobox">
+									<h3>방콕</h3>
+									<img src="boats-2758962_1920.jpg" alt="" class="travel_pic"><br>
+									방콕방콕<br>
+									방콕방콕<br>
+									방콕방콕
+								</div>
+								</div> -->
+							</td>
+							<td>18</td>
+							<td>19</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>21</td>
+							<td>22</td>
+							<td>23</td>
+							<td class="fes">24
+<!-- 								<div class="infobox">
+									<h3>필리핀</h3>
+									<img src="polynesia-3021072_1920.jpg" alt="" class="travel_pic"><br>
+									필리핀<br>
+									필리핀<br>
+									필리핀
+								</div>
+								</div> -->
+							</td>
+							<td>25</td>
+							<td>26</td>
+							<td>27</td>
+						</tr>
+						<tr>
+							<td>28</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab3">
+				<label for="tab3">3월</label>
+				<div id="tab-content1" class="content">
+					<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td>3월</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab4">
+				<label for="tab4">4월</label>
+				<div id="tab-content1" class="content">
+					<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td>4월</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab5">
+				<label for="tab5">5월</label>
+				<div id="tab-content1" class="content">
+					<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td>5월</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab6">
+				<label for="tab6">6월</label>
+				<div id="tab-content1" class="content">
+					<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td>6월</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab7">
+				<label for="tab7">7월</label>
+				<div id="tab-content1" class="content">
+					<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td>7월</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab8">
+				<label for="tab8">8월</label>
+				<div id="tab-content1" class="content">
+					<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td>8월</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab9">
+				<label for="tab9">9월</label>
+				<div id="tab-content1" class="content">
+					<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td>9월</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab10">
+				<label for="tab10">10월</label>
+				<div id="tab-content1" class="content">
+					<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td>10월</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab11">
+				<label for="tab11">11월</label>
+				<div id="tab-content1" class="content">
+										<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td>11월</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab12">
+				<label for="tab12">12월</label>
+				<div id="tab-content1" class="content">
+										<table>
+						<tr id="week">
+							<td>Sunday</td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+						</tr>
+						<tr>
+							<td>12월</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<section id="box4">
+		<h1>#국내여행도_라온이라오</h1>
+		  <div id="container01">
+		  <ul class="list">
+		      <li>
+		        <img src="01.jpg">
+		        <div class="caption">
+		          <h1>강릉</h1>
+		          <p>솔향 가득한 문화 관광도시</p>
+		          <p>경포 해수욕장<br> 오죽헌<br> 경포대<br> 참소리 축음기 에디슨 과학박물관<br> 모래시계 언덕<br>
+		          중앙전통 시장<br> 허난설헌 기념공원<br> 정동진 해돋이<br> 소돌아들 바위공원 </p>
+		        </div>
+		      </li>
+		      <li>
+		        <img src="02.jpg">
+		        <div class="caption">
+		          <h1>서울</h1>
+		          <p>We Are Friends, I Love Seoul</p>
+		          <p>북악스카이웨어 팔각정<br> 아차산<br> 한강예술공원<br> 국회의사당<br> 여의도샛강생태공원<br> 63스퀘어 </p>
+		        </div>
+		      </li>
+		      <li>
+		        <img src="03.jpg">
+		        <div class="caption">
+		          <h1>여수</h1>
+		          <p>섬섬여수</p>
+		          <p>영취산<br> 스카이타워<br> 아쿠아플라넷<br> 돌산공원<br> 오동도<br> 여수해양공원<br> 향일암<br> 여수 낭만포차거리</p>
+		        </div>
+		      </li>
+		      <li>
+		        <img src="04.jpg">
+		        <div class="caption">
+		          <h1>부산</h1>
+		          <p>City of Tomorrow, Asian Gateway</p>
+		          <p>감천 문화마을<br> 해동 용궁사<br> 해운대<br> 태종대<br> 범어사<br> 광안리해수욕장<br> 광안대교<br> 이기대도시자연공원<br> UN기념공원</p>
+		        </div>
+		      </li>
+		      <li>
+		        <img src="05.jpg">
+		        <div class="caption">
+		          <h1>제주도</h1>
+		          <p>온리제주</p>
+		          <p>안장굴<br> 우도<br> 성산일출봉<br> 섭지코지<br> 산굼부리<br> 한라산<br> 쇠소깍<br> 정방폭포<br> 카멜리아힐<br> 올레길 10코스</p>
+		        </div>
+		      </li>
+		    </ul>
+		  </div>
+	</section>
+	<section id="box5">
+		<h1>#사계절여행도_라온이라오</h1>
+		<div id="season_picture">
+             <div id="season_button">
+             	<ul id="season_ul">
+             		<li>
+             			<input type="radio" name="pabs" id="season_spring" checked>
+				        <label for="season_spring">봄 여행</label>
+				        <div id="pab-content1" class="season_content">
+                            <div class="travel1box"><img src="경주의 봄.jpg" alt="">
+                            <img src="여수의 봄.jpg" alt="">
+                            <img src="제주도의 봄.jpg" alt="">
+                            </div>          
+                        </div>	
+             		</li>
+             		<li>
+             			<input type="radio" name="pabs" id="season_summer">
+				        <label for="season_summer">여름 여행</label>
+				        <div id="pab-content1" class="season_content">
+                            <div class="travel1box"><img src="양양 여름.jpg" alt="">
+                            <img src="울릉도 여름.jpg" alt="">
+                            <img src="비금도 여름.jpg" alt="">
+                            </div>
+                         </div>   	
+             		</li>
+             		<li>
+             			<input type="radio" name="pabs" id="season_fall">
+				        <label for="season_fall">가을 여행</label>
+				        <div id="pab-content1" class="season_content">
+                            <div class="travel1box"><img src="고창가을.jpg" alt="">
+                            <img src="거제도가을.jpg" alt="">
+                            <img src="단양가을.jpg" alt="">
+                            </div>
+                         </div>   	
+             		</li>
+             		<li>
+             			<input type="radio" name="pabs" id="season_winter">
+				        <label for="season_winter">겨울 여행</label>
+				        <div id="pab-content1" class="season_content">
+                            <div class="travel1box"><img src="강릉겨울.jpg" alt="">
+                            <img src="인제겨울.jpg" alt="">
+                            <img src="진안겨울.jpg" alt="">
+                            </div>
+                        </div>   	
+             		</li>
+             	</ul>
+             </div>
+	</div>
+	</section>
+	<section id="box6">
+		<div id="hotel">
+			<h1>#호캉스를위해_호텔BEST</h1>
+			<div class="hh">
+				<a href=""><img src="s1.jpg" alt="" ></a>서울 시그니엘
+			      <div class="detail">
+						<p>최저가<br><br>400,500원~</p>
+					</div></div>
+			<div class="hh">
+				<a href=""><img src="s2.jpg" alt="" ></a>서울 JW 메리어트
+			      <div class="detail">
+						<p>최저가<br><br>250,400원~</p>
+					</div></div>
+		    <div class="hh">
+				<a href=""><img src="s3.jpg" alt="" ></a>서울 포시즌스
+			      <div class="detail">
+						<p>최저가<br><br>320,000원~</p>
+					</div></div>
+			<div class="hh">
+				<a href=""><img src="i1.jpg" alt="" ></a>인천 네스트
+			      <div class="detail">
+						<p>최저가<br><br>134,900원~</p>
+					</div></div>
+			<div class="hh">
+				<a href=""><img src="i2.jpg" alt="" ></a>인천 파라다이스
+			      <div class="detail">
+						<p>최저가<br><br>339,270원~</p>
+					</div></div>
+			<div class="hh">
+				<a href=""><img src="b1.jpg" alt="" ></a>부산 하얏트
+			      <div class="detail">
+						<p>최저가<br><br>400,500원~</p>
+					</div></div>
+			<div class="hh">
+				<a href=""><img src="b2.jpg" alt="" ></a>부산 힐튼
+			      <div class="detail">
+						<p>최저가<br><br>310,200원~</p>
+					</div></div>
+			<div class="hh">
+				<a href=""><img src="j1.jpg" alt="" ></a>제주 롯데
+			      <div class="detail">
+						<p>최저가<br><br>236,200원~</p>
+					</div></div>
+			<div class="hh">
+				<a href=""><img src="j2.jpg" alt="" ></a>제주 신라
+			      <div class="detail">
+						<p>최저가<br><br>348,200원~</p>
+					</div></div>
+			<div class="hh">
+				<a href=""><img src="g1.jpg" alt="" ></a>정동진 썬크루즈
+			      <div class="detail">
+						<p>최저가<br><br>110,500원~</p>
+					</div></div>
+
+		</div>
+	</section>
+	<footer>
+		<div id="foot">
+			<div class="foot_cont" id="foot_first">
+				<h2>라온투어닷컴 고객센터</h2>
+				<h2>0000-0000</h2> <br><br>
+				<span><a href="#">자주 찾는 질문 ></a><br>
+				<a href="#">ARS상담번호 안내 ></a></span>
+			</div>
+			<div class="foot_cont" id="foot_second">
+				<h4>해외여행 문의</h4>
+				<span>평일: 09:00~18:00 <br><br>
+				※코로나 바이러스19로 인한 근무 시간 축소로 주말 및 야간 상담 서비스가 임시 중단 됩니다. <br>더 나은 서비스로 찾아뵐 수 있도록 하겠습니다.</span>
+				<h4>상담번호 안내</h4>
+				<span>1번 예약상담<br>2번 ARS 예약 확인 및 결제 확인 <br>3번 국내공연예매, 마일리지 및 제휴카드, 기타문의</span>
+			</div>
+			<div class="foot_cont" id="foot_third">
+				<h4>국내여행/기업출장/교육여행 단체 문의</h4>
+				평일: 09:00~18:00 <br><br><br>
+				<h4>법인고객 전용상담 0000-0000</h4>
+				<h4>안심카드결제 ARS 0000-0000</h4>
+			</div>
+			<div class="foot_cont" id="foot_third">
+				<a href=""><img src="sung.jpg" alt=""></a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
